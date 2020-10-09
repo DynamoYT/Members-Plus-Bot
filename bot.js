@@ -8,7 +8,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client({ fetchAllMembers: false, messageCacheMaxSize: 5 }); 
 const db = require('quick.db');
 const fs = require('fs');
-const config = require('./config.json');
 client.commands = new Discord.Collection();
 const files = fs.readdirSync('./commands/').filter(file => file.endsWith(".js")); 
 for (const commands of files) {
